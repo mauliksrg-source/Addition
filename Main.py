@@ -1,0 +1,18 @@
+import tkinter as tk
+root=tk.Tk()
+root.geometry("500x600")
+root.configure(bg="blue")
+l=tk.Label(root,text="Arithmatic operation", bg="blue", fg="red", font=("Times", 24, "bold"))
+l.place(relx=0.5, rely=0.2, anchor="center")
+i=tk.Entry(root)
+i.place(relx=0.5, rely=0.4, anchor="center")
+o=tk.Entry(root)
+o.place(relx=0.5, rely=0.45, anchor="center")
+e=tk.Label(root, text="", bg="blue", fg="red", font=("Times", 24, "bold"))
+e.place(relx=0.5, rely=0.525, anchor="center")
+def add():
+    a=int(i.get())+int(o.get())
+    e.config(text=a)
+b=tk.Button(root, text="add", command=add)
+b.place(relx=0.5, rely= 0.6, anchor="center")
+root.mainloop()
